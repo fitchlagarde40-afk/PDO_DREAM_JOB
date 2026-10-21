@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS theater_arts_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE theater_arts_db;
+
+CREATE TABLE IF NOT EXISTS applications (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(80) NOT NULL,
+  last_name VARCHAR(80) NOT NULL,
+  email VARCHAR(150) NOT NULL,
+  phone VARCHAR(30) NOT NULL,
+  age TINYINT UNSIGNED NOT NULL,
+  role_applied VARCHAR(100) NOT NULL,
+  experience_level VARCHAR(50) NOT NULL,
+  skills TEXT NOT NULL,
+  availability DATE NOT NULL,
+  date_added TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
